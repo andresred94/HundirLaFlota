@@ -16,11 +16,6 @@ public class Casilla {
     private char barco = 'B';
     private char tocado = 'X';
 
-    //Si modifico este archivo se ve en GitHub?
-    //Sigo intentando ver las modificacioens
-    //otra prueba
-    //otra prueba 3
-
     //metodos constructores
     public Casilla(int fila, int columna, boolean estadoCasilla,boolean impactado,boolean hundido, char agua, char barco){
         setFila(fila);
