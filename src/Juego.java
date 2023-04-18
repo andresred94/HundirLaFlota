@@ -16,10 +16,6 @@ public class Juego {//Este es la clase JUEGO
     //Se validan que los disparos sean validos y no se repitan. Cuando un jugador hunder todos los barcos finaliza la partida
     public static void main(String[] args) {
 
-        Tablero tab = new Tablero();
-
-
-
 
     }
 }

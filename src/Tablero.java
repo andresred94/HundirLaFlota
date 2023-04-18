@@ -11,19 +11,34 @@ public class Tablero {
      * un método para inicializar el tablero (colocar los barcos de forma automática o pidiendo datos).
      */
 
-    /*ATRIBUTOS */
+    /****** atributos de la clase ******/
     private Casilla [][] TableroJugador = new Casilla [filas][columnas];
     private int numerodecasillas;
     private int casilla;
-
     private final static int columnas = 10;
-
     private final static int filas = 10;
 
+    /******* setter y getter ******/
+    public Casilla[][] getTableroJugador() {
+        return TableroJugador;
+    }
+    public void setTableroJugador(Casilla[][] tableroJugador) {
+        TableroJugador = tableroJugador;
+    }
+    public int getNumerodecasillas() {
+        return numerodecasillas;
+    }
+    public void setNumerodecasillas(int numerodecasillas) {
+        this.numerodecasillas = numerodecasillas;
+    }
+    public int getCasilla() {
+        return casilla;
+    }
+    public void setCasilla(int casilla) {
+        this.casilla = casilla;
+    }
 
-
-    /*CONSTRUCTOR*/
-
+    /******* metodos constructores ******/
     public Tablero(int casilla , int numerodecasillas , Casilla [][] TableroJugador){
         this.casilla=casilla;
         this.numerodecasillas=numerodecasillas;
@@ -31,32 +46,7 @@ public class Tablero {
 
     }
 
-    /* GETTER Y SETTERS*/
-    public Casilla[][] getTableroJugador() {
-        return TableroJugador;
-    }
-
-    public void setTableroJugador(Casilla[][] tableroJugador) {
-        TableroJugador = tableroJugador;
-    }
-
-    public int getNumerodecasillas() {
-        return numerodecasillas;
-    }
-
-    public void setNumerodecasillas(int numerodecasillas) {
-        this.numerodecasillas = numerodecasillas;
-    }
-
-    public int getCasilla() {
-        return casilla;
-    }
-
-    public void setCasilla(int casilla) {
-        this.casilla = casilla;
-    }
-
-    //Métodos principales
+    /****** metodos de la clase Tablero ******/
     /**
      * Método que crea el tablero del juego del tamaño indicado en la constante
      * @param :constante que define el tamaño
@@ -72,7 +62,6 @@ public class Tablero {
         }
         return posicionTetraminos(tableroDeJuego, numTetramino, agua, tetramino);
     }
-
     /**
      * Método que sirve para colocar los barcos
      * @param tableroDeJuego
@@ -94,7 +83,6 @@ public class Tablero {
         }
         return tableroDeJuego;
     }
-
     /**
      * Método que genera la primera posición a partir de donde será creado
      * el barco.

@@ -9,36 +9,36 @@ public class Jugador {
      * y en función de si es agua, tocado o hundido el tablero del jugador.
      */
 
+    /****** atributos de la clase ******/
     private String nombreJugador;
     private Tetramino[] barcosJugador = new Tetramino[5];
     private int numbarcosNOhundidos;
 
+    /****** setter y getter ******/
+    public String getNombreJugador() {
+        return nombreJugador;
+    }
+    public void setNombreJugador(String nombreJugador) {
+        this.nombreJugador = nombreJugador;
+    }
+    public Tetramino[] getBarcosJugador() {
+        return barcosJugador;
+    }
+    public void setBarcosJugador(Tetramino[] barcosJugador) {
+        this.barcosJugador = barcosJugador;
+    }
+    public int getNumbarcosNOhundidos() {
+        return numbarcosNOhundidos;
+    }
+    public void setNumbarcosNOhundidos(int numbarcosNOhundidos) {
+        this.numbarcosNOhundidos = numbarcosNOhundidos;
+    }
+
+    /****** metodos constructores *****/
     public Jugador(String nombreJugador , int numbarcosNOhundidos , Tetramino[]barcosJugador ) {
         this.nombreJugador=nombreJugador;
         this.numbarcosNOhundidos=numbarcosNOhundidos;
         this.barcosJugador=barcosJugador;
     }
-    public String getNombreJugador() {
-        return nombreJugador;
-    }
 
-    public void setNombreJugador(String nombreJugador) {
-        this.nombreJugador = nombreJugador;
-    }
-
-    public Tetramino[] getBarcosJugador() {
-        return barcosJugador;
-    }
-
-    public void setBarcosJugador(Tetramino[] barcosJugador) {
-        this.barcosJugador = barcosJugador;
-    }
-
-    public int getNumbarcosNOhundidos() {
-        return numbarcosNOhundidos;
-    }
-
-    public void setNumbarcosNOhundidos(int numbarcosNOhundidos) {
-        this.numbarcosNOhundidos = numbarcosNOhundidos;
-    }
 }

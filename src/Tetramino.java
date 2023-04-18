@@ -10,46 +10,40 @@ public class Tetramino {
         TIPOUNO,
         TIPODOS
     };
-    /*ATRIBUTOS */
 
+    /****** atributos de la clase *****/
     private TIPO tipo;
     private Casilla[][] posicion; //ToDo ¿Que es? = new Casilla[][];
     private final static int puntosdeVida = 4;
 
-    //metodo constructor
+    /****** metodos constructores ******/
     public Tetramino(TIPO tipo, Casilla[][]posicion) {
         this.tipo=tipo;
         this.posicion=posicion;
     }
 
-    /*GETTERS Y SETTERS*/
-
+    /****** setter y getters ******/
     public TIPO getTipo() {
         return tipo;
     }
-
     public void setTipo(TIPO tipo) {
         this.tipo = tipo;
     }
-
     public Casilla[][] getPosicion() {
         return posicion;
     }
-
     public void setPosicion(Casilla[][] posicion) {
         this.posicion = posicion;
     }
 
-    //metodos
+    /****** metodos normales de la clase Tetramino ******/
     //metodo para determinar si el barco ha sido hundido (puntos de vida igual a cero)
     /**
      * @param:
      * */
     public void esHundido(){
         //Es hundido cuando los puntos de vida llega a 0
-        if (puntosdeVida==0){
-            Casilla.setHundido();
-        }
+
     }
 
     //metodo para recibir un disparo en una casilla y reducir el número puntos de vida del barco
@@ -57,9 +51,6 @@ public class Tetramino {
      * @param
      */
     public void tocado(){
-        if (Casilla.isImpactado()==true){
-            System.out.println(Casilla.getTocado());
-        }
     }
 
 }
